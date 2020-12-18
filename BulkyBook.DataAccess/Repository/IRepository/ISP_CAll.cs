@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BulkyBook.DataAccess.Repository.IRepository
 {
-    interface ISP_CAll: IDisposable
+    public interface ISP_CAll: IDisposable
     {
         T Single<T>(string procedureName, DynamicParameters param = null);
 
