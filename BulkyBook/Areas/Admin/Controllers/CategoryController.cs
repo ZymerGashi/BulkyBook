@@ -34,7 +34,6 @@ namespace BulkyBook.Areas.Admin.Controllers
                 return View(category);
             
             }
-            var test = id.GetValueOrDefault();
             //this is for edit
             category = _unitOfWork.Category.Get(id.GetValueOrDefault());
             if (category == null) {
