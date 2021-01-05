@@ -2,7 +2,7 @@
 
 namespace BulkyBook.DataAccess.Migrations
 {
-    public partial class AddProductToDb : Migration
+    public partial class addProductToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,12 +14,13 @@ namespace BulkyBook.DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: true),
                     Description = table.Column<int>(nullable: false),
-                    ISBN = table.Column<string>(nullable: true),
-                    Author = table.Column<string>(nullable: true),
+                    ISBN = table.Column<string>(nullable: false),
+                    Author = table.Column<string>(nullable: false),
                     ListPrice = table.Column<double>(nullable: false),
                     Price = table.Column<double>(nullable: false),
                     Price50 = table.Column<double>(nullable: false),
                     Price100 = table.Column<double>(nullable: false),
+                    ImageUrl = table.Column<string>(nullable: true),
                     CategoryId = table.Column<int>(nullable: false),
                     CoverTypeId = table.Column<int>(nullable: false)
                 },
